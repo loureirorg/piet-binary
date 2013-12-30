@@ -5,14 +5,16 @@ Description
 -----------
 
 Piet-Binary is a gem which contains binaries for use with the [Piet](https://github.com/albertbellonch/piet) gem.
-This is harmless gem - you can add to your Gemfile without collateral effects. It only will be activated if you use the Piet gem and you don't have jpegoptim/optipng binaries (and any other used by the Piet gem) in your system.
-This gem doesn't have the pretention to be an all-case solution to the problem of lack of binaries required by Piet in the system. But will resolve the problem in the mosts cases. If you use this gem and Piet still accuse a not found error for the binaries tools (jpegoptim/optipng), you have to manually install the tools in the system. In this case you can help to improve this gem and add the missing binaries (see the "Helping this gem" section).
+
+This is an harmless gem - you can add to your Gemfile without collateral effects. It will only be activated if you use the Piet gem and you don't have the jpegoptim/optipng binaries (and any other used by the Piet gem) in your system.
+
+This gem haven't the pretention to be an all-case solution to the problem of lack of binaries required by Piet in the system. But will resolve the problem in the mosts cases. If you use this gem and Piet still accuse a not found error for the binaries tools (jpegoptim/optipng), you have to manually install the tools in the system. In this case you can help to improve this gem and add the missing binaries (see the "Helping this gem" section).
 
 
 Why?
 ----
 
-To Piet gem work without manually install jpegoptim/optipng in the system. This is necessary to Piet work, for example, with Heroku.
+This gem has the purpose to make the Piet gem work without manually install the jpegoptim/optipng tools in the system. This is necessary to Piet work if you are using Heroku as your host, and in many others hosting providers (mainly the shared ones) who doesn't allow to compile and/or install apps.
 
 
 Installation
@@ -28,7 +30,7 @@ or, if you are using in Rails just add to your Gemfile (and, of course, install 
 gem 'piet-binary'
 ```
 
-This gem automatically calls the piet gem, so it's not necessary to call the piet gem. So, you can just replace this:
+This gem automatically calls the piet gem, so it's not necessary to you call the piet gem. In this case, you can just replace this:
 ```ruby
 gem 'piet'
 ```
@@ -51,15 +53,16 @@ require 'piet-binary'
 Helping this gem
 ----------------
 
-You can help this gem in 2 ways:
-* keeping this gem with the latest version of the binaries
+You can help to improve this gem in 2 ways:
+* keeping this gem updated, with the latests binaries
 * adding platforms: today it only have a linux/64 bits binaries
 
-To compile the jpegoptim, clone the last version of https://github.com/tjko/jpegoptim and execute the config with the "-static" CFLAG (it's necessary to create a non-dependable standalone exec file):
+To compile the jpegoptim in linux/osx, clone the last version at https://github.com/tjko/jpegoptim and execute the configure with the "-static" CFLAG (it's necessary to create a non-dependable standalone exec file):
 
 ```bash
 git clone https://github.com/tjko/jpegoptim.git
 cd jpegoptim
 CFLAGS="-static" ./configure
+make
 ```
-after this, copy the jpegoptim executable to the correct folder of this gem and submit a pull request.
+after this, copy the jpegoptim executable to the correct folder in this gem (the bin folder) and submit a pull request.
