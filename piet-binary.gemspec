@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
   s.add_dependency "png_quantizator"
-  s.add_dependency "piet", ['>= 2.0.0']
+  s.add_dependency "piet", ['>= 0.2.0']
   s.add_development_dependency "rspec"
   s.add_development_dependency "ZenTest"
   s.add_runtime_dependency 'os', ['~> 0.9.6']
