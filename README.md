@@ -20,7 +20,22 @@ This gem has the purpose to make the Piet gem work without manually install the 
 Installation
 ------------
 
-```bash
+__------ WARNING! ------__
+
+this gem ain't work with the [original piet gem](https://github.com/albertbellonch/piet). It's necessary to use [my version of piet](https://github.com/loureirorg/piet) to work, as appointed by @PikachuEXE user at the [issue #1](https://github.com/loureirorg/piet-binary/issues/1). My version is on proccess to be merged with the original version, so, probally in a few days this gem will work with the official piet gem. When this occour this warning will be erased.
+
+so, in your Gemfile (before call piet-binary) use:
+```ruby
+gem 'piet', github: 'loureirorg/piet'
+```
+or
+```ruby
+gem 'piet', git: 'git://github.com/loureirorg/piet.git'
+```
+
+__------ END OF WARNING! ------__
+
+ ```bash
 gem install piet-binary
 ```
 
