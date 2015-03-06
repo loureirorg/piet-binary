@@ -4,17 +4,17 @@ Piet-Binary
 Description
 -----------
 
-Piet-Binary is a gem which contains binaries for use with the [Piet](https://github.com/albertbellonch/piet) gem.
+Piet-Binary its a gem that provides binaries for use with the [Piet](https://github.com/albertbellonch/piet) gem.
 
-This is an harmless gem - you can add to your Gemfile without collateral effects. It will only be activated if you use the Piet gem and you don't have the jpegoptim/optipng binaries (and any other used by the Piet gem) in your system.
+Its an harmless gem - you can add to your Gemfile without collateral effects. It will only be activated if you use Piet gem and you don't have the jpegoptim/optipng binaries (and any other used by the Piet gem) at your system.
 
-This gem haven't the pretention to be an all-case solution to the problem of lack of binaries required by Piet in the system. But will resolve the problem in the mosts cases. If you use this gem and Piet still accuse a not found error for the binaries tools (jpegoptim/optipng), you have to manually install the tools in the system. In this case you can help to improve this gem and add the missing binaries (see the "Helping this gem" section).
+This gem haven't the pretension to be an all-case solution to the problem of lack of binaries required by Piet in the system. But will resolve the problem in the mosts cases. If you use this gem and Piet still accuse a "not found" error for the binaries tools (jpegoptim/optipng), you must to manually install the tools at your system. In this case you can help to improve this gem and add the missing binaries (see the "Helping this gem" section).
 
 
 Why?
 ----
 
-This gem has the purpose to make the Piet gem work without manually install the jpegoptim/optipng tools in the system. This is necessary to Piet work if you are using Heroku as your host, and in many others hosting providers (mainly the shared ones) who doesn't allow to compile and/or install apps.
+This gem has the purpose to make the Piet gem works automagically, without having to manually install the jpegoptim/optipng tools. This is necessary to Piet work if you are using Heroku as your host, for instance, and in many others hosting providers (mainly the shared ones) who doesn't allow to compile and/or install apps.
 
 
 Installation
@@ -24,7 +24,7 @@ Installation
 gem install piet-binary
 ```
 
-or, if you are using in Rails just add to your Gemfile (and, of course, install with "bundle install"):
+or, if you are using Rails just add to your Gemfile (and, of course, do a "bundle install"):
 
 ```ruby
 gem 'piet-binary'
@@ -43,7 +43,7 @@ gem 'piet-binary'
 Usage
 -----
 
-You simply require the gem
+Just use "require" to load (not necessary in Rails):
 
 ```ruby
 require 'piet-binary'
